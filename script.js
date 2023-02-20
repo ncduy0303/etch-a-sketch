@@ -3,17 +3,14 @@ const canvas = document.querySelector('.canvas');
 
 // Create a function that creates a grid of divs
 function createGrid(size) {
+    canvas.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    canvas.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
     for (let i = 0; i < size * size; i++) {
-        const div = document.createElement('div');
-        div.classList.add('square');
-        canvas.appendChild(div);
+        const square = document.createElement('div');
+        square.classList.add('square');
+        canvas.appendChild(square);
     }
-    // Set the width and height of the squares to fit the canvas
-    const square = document.querySelectorAll('.square');
-    square.forEach((square) => {
-        square.style.width = `${canvas.clientWidth / size}px`;
-        square.style.height = `${canvas.clientHeight / size}px`;
-    });
 }
 
 createGrid(16);
