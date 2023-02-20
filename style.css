@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.container {
+.app {
   display: flex;
   flex-direction: column;
   justify-content: center;
