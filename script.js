@@ -13,4 +13,12 @@ function createGrid(size) {
     }
 }
 
+// Update the canvas size when the slider is released
+const sizeSlider = document.querySelector('#sizeSlider');
+sizeSlider.addEventListener('mouseup', () => {
+    const size = sizeSlider.value;
+    canvas.innerHTML = '';
+    createGrid(size);
+});
+
 createGrid(16);
