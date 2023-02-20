@@ -54,4 +54,13 @@ colorPicker.addEventListener('change', () => {
     currentColor = colorPicker.value;
 });
 
+// Toggle the grid lines when the grid button is clicked
+const gridButton = document.querySelector('#gridButton');
+gridButton.addEventListener('click', () => {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.classList.toggle('border');
+    });
+});
+
 createGrid(DEFAULT_SIZE);

@@ -21,5 +21,8 @@
 /* The square cell of the canvas */
 .square {
     user-select: none;
+}
+
+.border {
     border: 1px solid black;
 }
