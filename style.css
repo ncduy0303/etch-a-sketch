@@ -26,3 +26,10 @@
 .border {
     border: 1px solid black;
 }
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

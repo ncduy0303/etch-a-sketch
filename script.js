@@ -10,12 +10,14 @@ const canvas = document.querySelector('.canvas');
 function createGrid(size) {
     canvas.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     canvas.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-
     for (let i = 0; i < size * size; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
         canvas.appendChild(square);
     }
+    // Update the label of the slider
+    const sizeLabel = document.querySelector('#sizeLabel');
+    sizeLabel.textContent = `${size} x ${size}`;
 }
 
 // Update the canvas size when the slider is released
