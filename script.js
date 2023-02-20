@@ -2,6 +2,9 @@
 const DEFAULT_SIZE = 16;
 const DEFAULT_COLOR = '#000000';
 
+// List of variables
+let currentColor = DEFAULT_COLOR;
+
 // Create a grid of squares on the canvas
 const canvas = document.querySelector('.canvas');
 function createGrid(size) {
@@ -32,7 +35,7 @@ canvas.addEventListener('mousedown', (e) => {
 canvas.addEventListener('mousemove', (e) => {
     console.log(e);
     if (e.buttons === 1 && e.target.classList.contains('square')) {
-        e.target.style.backgroundColor = DEFAULT_COLOR;
+        e.target.style.backgroundColor = currentColor;
     }
 });
 
@@ -43,6 +46,12 @@ resetButton.addEventListener('click', () => {
     squares.forEach((square) => {
         square.style.backgroundColor = 'white';
     });
+});
+
+// Update the current color when the color picker is changed
+const colorPicker = document.querySelector('#colorPicker');
+colorPicker.addEventListener('change', () => {
+    currentColor = colorPicker.value;
 });
 
 createGrid(DEFAULT_SIZE);
