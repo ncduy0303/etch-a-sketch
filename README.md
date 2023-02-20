@@ -1,2 +1,2 @@
-# etch-a-sketch
-Etch a sketch game created with HTML, CSS and JS.
+# Etch a Sketch
+A simple sketch pad created with HTML, CSS and JS.
