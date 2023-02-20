@@ -19,9 +19,7 @@
 }
 
 /* The square cell of the canvas */
-/* Their height and width are variables to fill up the canvas */
-/* No margins between them */
 .square {
-    margin: 0;
+    user-select: none;
     border: 1px solid black;
 }
